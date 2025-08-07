@@ -6,6 +6,19 @@ In this project, I use Natural Language Processing (NLP) techniques and machine 
 
 **Parts of code:**
 
+Dropping irrelevant columns:
+df = df.drop("index", axis=1)
+df = df.drop("docket", axis=1)
+df = df.drop("name", axis=1)
+df = df.drop("ID", axis=1)
+df = df.drop("href", axis=1)
+df = df.dropna(axis=0, subset=['first_party', 'second_party'])
+Because I am using the facts of the case to predict the outcome, I am deleting all other columns from my dataset, as they are irrelevant.
+
+Making all the words lowercase
+def lowerCase(facts):
+    return facts.lower()
+
 
 **Fine-Tuning:**
 
