@@ -92,7 +92,7 @@ df["facts"] = df["facts"].apply(stemmingWords)
 ```
 Words like “suing” and “sue” have the same basic meaning, but are conjugated differently. Stemming is a technique used to reduce all words to a common base form, which allows the computer to treat all related words as the same, focusing on their core meanings, instead of their conjugations.
 
-###Quantifying outcomes:
+### Quantifying outcomes:
 ```
 print("Making outcome numerical.....")
 def outcomeQuantifying(outcome):
